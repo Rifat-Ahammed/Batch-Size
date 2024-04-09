@@ -57,6 +57,21 @@ learning rate.
 import numpy as np
 import matplotlib.pyplot as plt
 
+np.random.seed(42) # for reproducibility
+x = 2 * np.random.rand(100, 1) # 100 samples, single feature
+y = 4 + 3 * x + np.random.randn(100, 1)
+
+def predict(x, w, b):
+    return x.dot(w) + b
+
+def mean_squared_error(y_true, y_pred):
+    return np.mean((y_true - y_pred)**2)
+
+def gradients(x, y, y_pred):
+    error = y_pred - y
+    grad_w = 2 * x.T.dot(error) / len(x)
+    grad_b = 2 * np.mean(error)
+    return grad_w, grad_b
 
 ```
 

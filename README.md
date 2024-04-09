@@ -40,4 +40,4 @@ The choice of batch size is usually empirical and can depend on various factors,
 - The desire for faster convergence versus better generalization.
 
 The batch size $N$, the learning rate by $\alpha$, and the loss function by $L$. For a given batch of samples
-$x_{\text{i}}$, $y_{\text{i}_{i}$, the update rule for a parameter in the model could be expressed as:
+$x_{\text{i}}$, $y_{\text{i}$$_{\text{i}$, the update rule for a parameter in the model could be expressed as:

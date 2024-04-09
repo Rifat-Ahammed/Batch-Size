@@ -52,3 +52,14 @@ learning rate.
   power without exceeding memory capacity.
 - Use empirical testing and validation to find the batch size that offers the best compromise
   between training speed and model performance.
+
+Here We used a dataset with a single feature for simplicity, aiming to predict a target variable through
+linear regression. This model will have two parameters: weight and bias , which we'll update using
+gradient descent.
+
+The steps are as follows:
+
+  1. Generate a synthetic dataset.
+  2. Define the model and loss function.
+  3. Implement mini-batch gradient descent.
+  4. Train with different batch sizes and observe the effects.

@@ -19,3 +19,14 @@ updated for each mini-batch. This is the most common approach used in practice.
 
 <h2 align="center">Impact of Batch Size</h2>
 
+- **Computational Efficiency:** Larger batch sizes allow for more efficient use of hardware
+accelerators like GPUs due to better parallelization. However, they also require more memory.
+- **Convergence Behavior:** Small batch sizes introduce noise into the parameter updates, which can
+help escape local minima but might also lead to convergence instability. Large batch sizes
+provide more stable but possibly less flexible updates.
+- **Generalization:** Empirical evidence suggests that smaller batch sizes often lead to models that
+generalize better to unseen data. This is thought to be due to the noise introduced by smaller
+batches, which acts as a form of regularization.
+- **Memory Constraints:** The maximum batch size can be limited by the memory capacity of the
+hardware used for training. This often requires balancing between batch size and model
+complexity.

@@ -53,6 +53,13 @@ learning rate.
 - Use empirical testing and validation to find the batch size that offers the best compromise
   between training speed and model performance.
 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+```
+
 Here We used a dataset with a single feature for simplicity, aiming to predict a target variable through
 linear regression. This model will have two parameters: weight and bias , which we'll update using
 gradient descent.
@@ -67,7 +74,25 @@ The steps are as follows:
 After training with different batch sizes—stochastic , small , medium , and full batch —here
 are the final weights and biases learned by the model for each batch size:
 
-- Stochastic (Batch Size = 1): $w = 2.74$, $b = 4.19$
-- Small Batch (Batch Size = 10): $w = 2.79$, $b = 4.20$
-- Medium Batch (Batch Size = 50): $w = 2.67$, $b = 4.32$
-- Full Batch (Batch Size = 100): $w = 2.94$, $b = 3.19$
+- **Stochastic (Batch Size = 1):** $w = 2.74$, $b = 4.19$
+- **Small Batch (Batch Size = 10):** $w = 2.79$, $b = 4.20$
+- **Medium Batch (Batch Size = 50):** $w = 2.67$, $b = 4.32$
+- **Full Batch (Batch Size = 100):** $w = 2.94$, $b = 3.19$
+
+This demonstrates how the batch size can influence the final parameters learned by the model. The
+variations in and for different batch sizes reflect the differences in how the gradient is estimated
+and applied:
+
+- **Stochastic gradient descent** (batch size = 1) updates the parameters in a highly variable manner,
+  leading to a noisy but potentially useful exploration of the parameter space.
+- **Small and medium batch sizes** offer a balance, providing more stable updates than stochastic
+  gradient descent but more variability than full batch learning. This can help in finding a good
+  balance between exploration and exploitation of the parameter space.
+- **Full batch gradient descent** uses the entire dataset to compute the gradient, resulting in the
+  most stable update direction but potentially getting stuck in local minima or taking longer to
+  converge due to the lack of noise in the updates.
+  
+The choice of batch size affects the training dynamics, convergence speed, and the ability to escape
+local minima. Smaller batches may lead to faster convergence times in practice due to more frequent
+updates, but they can also introduce more noise into the training process, which can be both
+beneficial (for escaping local minima) and detrimental (leading to less stable convergence).

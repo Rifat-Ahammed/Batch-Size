@@ -134,3 +134,10 @@ plt.show()
 ```
 ![image](https://github.com/Rifat-Ahammed/Batch-Size/assets/96107279/5354358f-563f-4acb-9743-d1d9d2184120)
 
+- The left chart shows the **Final Weight** for different batch sizes. You can observe that the weight
+ values are quite close to each other, with slight variations. This indicates that while the batch size
+ does influence the learning process, the model is able to learn a similar underlying pattern across
+ different batch sizes.
+
+- The right chart displays the **Final Bias** for the same batch sizes. Similar to the weight values, the
+ bias values also show variations but remain in a comparable range.

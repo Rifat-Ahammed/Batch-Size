@@ -72,6 +72,7 @@ def gradients(x, y, y_pred):
     grad_w = 2 * x.T.dot(error) / len(x)
     grad_b = 2 * np.mean(error)
     return grad_w, grad_b
+..........................
 
 ```
 
@@ -111,3 +112,25 @@ The choice of batch size affects the training dynamics, convergence speed, and t
 local minima. Smaller batches may lead to faster convergence times in practice due to more frequent
 updates, but they can also introduce more noise into the training process, which can be both
 beneficial (for escaping local minima) and detrimental (leading to less stable convergence).
+
+```python
+plt.subplot(1, 2, 1)
+plt.bar(range(len(batch_sizes)), weights, tick_label = batch_sizes)
+plt.xlabel('Batch Size')
+plt.ylabel('Weight value')
+plt.title('Final Weight for Different Batch Sizes')
+
+# biases 
+
+plt.subplot(1, 2, 2)
+plt.bar(range(len(batch_sizes)), weights, tick_label = batch_sizes)
+plt.xlabel('Batch Size')
+plt.ylabel('Biases value')
+plt.title('Final Bias for Different Batch Sizes')
+
+plt.tight_layout()
+plt.show()
+
+```
+![image](https://github.com/Rifat-Ahammed/Batch-Size/assets/96107279/5354358f-563f-4acb-9743-d1d9d2184120)
+

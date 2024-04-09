@@ -30,3 +30,14 @@ batches, which acts as a form of regularization.
 - **Memory Constraints:** The maximum batch size can be limited by the memory capacity of the
 hardware used for training. This often requires balancing between batch size and model
 complexity.
+
+<h2 align="center">Choosing Batch Size</h2>
+
+The choice of batch size is usually empirical and can depend on various factors, including:
+
+- The specific machine learning task and dataset.
+- Hardware constraints, especially GPU memory.
+- The desire for faster convergence versus better generalization.
+
+The batch size $N$, the learning rate by $\alpha$, and the loss function by $L$. For a given batch of samples
+$x_{\text{i}}$, $y_{\text{i}_{i}$, the update rule for a parameter in the model could be expressed as:

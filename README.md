@@ -43,3 +43,12 @@ The batch size $N$, the learning rate by $\alpha$, and the loss function by $L$.
 $x_{\text{i}}$, $Y_{i_i}^N = 1$, the update rule for a parameter in the model could be expressed as:<br/>
 
 $$w_{\text{new}} = w_{\text{old}} - \alpha \cdot \frac{1}{N} \ \sum_{i=1}^N \nabla L(w_{\text{old}}; x_{\text{i}}, y_{\text{i}})$$
+
+This represents the average gradient of the loss function over the batch of samples, scaled by the
+learning rate.
+- Start with a small batch size, then increase until you see diminishing returns in speed and
+  learning stability.
+- Consider the hardware limitations and adjust the batch size to fully utilize the computational
+  power without exceeding memory capacity.
+- Use empirical testing and validation to find the batch size that offers the best compromise
+  between training speed and model performance.

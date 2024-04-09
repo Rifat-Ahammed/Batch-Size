@@ -16,3 +16,6 @@ lead to very noisy updates, but it also allows for online training.
 - **Mini-batch Gradient Descent:** This is a compromise between the two extremes mentioned
 above. The dataset is divided into mini-batches of a specific size, and model parameters are
 updated for each mini-batch. This is the most common approach used in practice.
+
+<h2 align="center">Impact of Batch Size</h2>
+

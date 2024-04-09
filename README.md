@@ -63,3 +63,11 @@ The steps are as follows:
   2. Define the model and loss function.
   3. Implement mini-batch gradient descent.
   4. Train with different batch sizes and observe the effects.
+
+After training with different batch sizes—stochastic , small , medium , and full batch —here
+are the final weights and biases learned by the model for each batch size:
+
+- Stochastic (Batch Size = 1): $w = 2.74$, $b = 4.19$
+- Small Batch (Batch Size = 10): $w = 2.79$, $b = 4.20$
+- Medium Batch (Batch Size = 50): $w = 2.67$, $b = 4.32$
+- Full Batch (Batch Size = 100): $w = 2.94$, $b = 3.19$

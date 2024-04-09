@@ -42,4 +42,4 @@ The choice of batch size is usually empirical and can depend on various factors,
 The batch size $N$, the learning rate by $\alpha$, and the loss function by $L$. For a given batch of samples
 $x_{\text{i}}$, $Y_{i_i}^N = 1$, the update rule for a parameter in the model could be expressed as:<br/>
 
-$$w_{\text{new}} = w_{\text{old}} - \alpha \cdot \frac{1}{N} \left( \sum_{i=1}^N \nabla L(w_{\text{old}})$$
+$$w_{\text{new}} = w_{\text{old}} - \alpha \cdot \frac{1}{N} \( \sum_{i=1}^N \nabla L(w_{\text{old}})$$
